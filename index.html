@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bagels & Beyond</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Bagels & Beyond</h1>
+            <div class="flex-box">
+                <a href="index.html"><img src="images/bnb-logo.png" alt="Bagels & Beyond"  id="logo-home"></a>
+                <div class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            <a href="menu.html" class="nav-item">Menu</a>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="menu.html#breakfast">Breakfast</a>
+                            <a href="menu.html#lunch">Lunch</a>
+                            <a href="menu.html#drinks">Drinks</a>
+                            <a href="menu.html#specials">Specials</a>
+                        </div>
+                    </div>
+                    <a href="#order"  class="nav-item">Order Online</a>
+                    <a href="#cater"  class="nav-item">Catering</a> <!-- placeholder link for undeveloped page -->
+                    <a href="about.html"  class="nav-item hidden-text">About</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="featured">
+                <h2>Today's Special</h2>
+                <img src="images/bagel-nova-lox.jpeg" alt="Today's special: Nova lox bagel sandwich">
+                <h3>Nova Lox</h3>
+                <p>Smooth Nova lox, cool cream cheese, fresh veggies, and capers stacked on a warm, freshly baked bagel of your choice.</p>
+                <a href="menu.html" class="click-me">Order Now</a>
+            </section>
+            <section id="order">
+                <div class="image-container">
+                    <img src="images/bagels-fresh.jpeg" alt="Freshly baked bagels">
+                    <a href="#order" class="overlay-link">Start Online Order</a>
+                </div>
+                <h3>or get delivery...</h3>
+                <ul id="delivery-links">
+                    <li>
+                        <a href="https://www.doordash.com/store/bagels-&-beyond-brooksville-325782/69759346/"><img src="images/doordash.png" alt="Doordash icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.ubereats.com/store/bagels-n-beyond/1H2bBQwcUDiaxHXSTlzkQQ"><img src="images/uber-eats.png" alt="Uber Eats icon"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.grubhub.com/restaurant/bagels-n-beyond-16272-spring-hill-drive-brooksville/5954376?classicAffiliateId=%2Fr%2Fw%2F5954376%2Frestaurant%2F5954376"><img src="images/grubhub.png" alt="Grubhub icon"></a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <img src="images/skyline.png" alt="New York skyline" id="skyline">
+            <section id="location">
+                <h4>Location</h4>
+                <address>16272 Spring Hill Dr<br>Brooksville, FL 34604</address>
+            </section>
+            <section id="hours">
+                <h4>Hours</h4>
+                <p>Monday - Friday<span>6:00am - 3:00pm</span></p>
+                <p>Saturday - Sunday<span>7:00am - 2:00pm</span></p>
+            </section>
+            <section id="contact">
+                <h4>Contact</h4>
+                <a href=“tel:352-593-4969”>(352) 593-4969</a>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/bagelsandbeyond" class="fa fa-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Bagels352" class="fa fa-twitter"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/bagels352/" class="fa fa-instagram"></a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,393 @@
+/* ------------ CSS RESET ------------ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------ ROOT VARIABLES ------------ */
+
+:root {
+    --black: #040404;
+    --white: #f5f3ed;
+    --yellow: #d5be61;
+    --brown: #4b2d0b;
+    --gray: #ababab;
+    --background: #ece9df;
+}
+
+/* ------------ GLOBAL STYLES (SMALL/MOBILE) ------------ */
+
+body {
+    min-width: 414px;
+    background: var(--background);
+    isolation: isolate;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    background-image: url(images/bagel-background.png);
+    z-index: -1;
+    opacity: 0.25;
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, .nav-item {
+    font-family: 'Fredericka the Great', sans-serif;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3, .overlay-link {
+    font-size: 36px;
+}
+
+.dropdown-content a, h3, h4, .click-me, .overlay-link {
+    font-family: 'Federo';
+}
+
+.dropdown-content a, .click-me {
+    font-size: 24px;
+}
+
+p, p span {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+}
+
+header, main, footer {
+    z-index: 2;
+}
+
+header {
+    background: var(--black);
+    height: 30vh;
+    width: 100vw;
+}
+
+h1 {
+    display: none;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#logo-home {
+    display: block;
+    height: 160px;
+    margin-top: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    white-space: nowrap;
+    width: 90vw;
+}
+
+.navbar a, .dropbtn {
+    margin: 0;
+    padding: 0;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    padding-bottom: 10px;
+}
+
+.dropbtn a {
+    color: var(--white);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .dropbtn a {
+    color: var(--yellow);
+    transform: scale(1.15);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--yellow);
+    color: var(--brown);
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 50;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: -25px;
+}
+
+.dropdown-content a {
+    text-decoration: none !important;
+    color: var(--brown);
+    text-align: center;
+    border-bottom: 1px solid var(--brown);
+    padding: 10px 0;
+}
+
+.dropdown-content a:last-of-type {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--black);
+    color: var(--yellow);
+    border-bottom: none;
+}
+
+.nav-item {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--white);
+    transition: transform 0.1s ease;
+}
+
+.nav-item:hover {
+    color: var(--yellow);
+    transform: scale(1.15);
+}
+
+.hidden-text::after {
+    content: "/Contact";
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: 0;
+}
+
+main {
+    padding-top: 40px;
+}
+
+main section {
+    background-color: var(--white);
+    width: 80vw;
+    margin: 0 auto 40px;
+    padding: 20px 0;
+    border-radius: 5px;
+    box-shadow: -5px 5px 5px #aaa;
+}
+
+#featured {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#featured h2 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#featured img, #order img {
+    width: 80vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+#featured h3 {
+    margin: 0 25px;
+    padding-left: 8px;
+    border-bottom: 1px solid var(--gray);
+}
+
+#featured p {
+    padding: 10px 40px;
+}
+
+
+#featured a {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 40px;
+    border-radius: 5px;
+    box-shadow: -2px 2px 2px #aaa;
+}
+
+.click-me {
+    background-color: var(--yellow);
+    color: var(--brown);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.click-me:hover {
+    background-color: var(--black);
+    color: var(--yellow);
+    transform: scale(1.15);
+}
+
+#order img {
+    margin-top: -20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block
+}
+
+.overlay-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--yellow);
+    color: var(--brown);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+}
+
+.overlay-link:hover {
+    background-color: var(--black);
+    color: var(--yellow);
+    font-size: 38px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.delivery-links {
+    width: 150px;
+}
+
+#skyline {
+    width: 100vw;
+}
+
+/* ------------ MEDIA QUERY (MEDIUM) ------------ */
+
+@media screen and (min-width: 768px) {
+    body {
+		min-width: 768px;
+		margin-bottom: 0;
+	}
+
+    body::before {
+        background-size: 75%;
+    }
+
+    .hidden-text::after {
+        opacity: 1;
+        transform: translateY(0);
+        width: auto;
+    }
+}
+
+/* ------------ MEDIA QUERY (LARGE) ------------ */
+
+@media screen and (min-width: 1280px) {
+	body {
+		min-width: 1280px;
+	}
+
+    body::before {
+        background-size: 50%;
+    }
+
+}
