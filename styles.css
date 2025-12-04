@@ -324,6 +324,13 @@ main section {
     font-size: 38px;
 }
 
+#order h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
 .fa {
   padding: 20px;
   font-size: 30px;
