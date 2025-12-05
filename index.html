@@ -19,10 +19,8 @@
                 <a href="index.html"><img src="images/bnb-logo.png" alt="Bagels & Beyond"  id="logo-home"></a>
                 <div class="navbar">
                     <div class="dropdown">
-                        <button class="dropbtn">
-                            <a href="menu.html" class="nav-item">Menu</a>
-                        </button>
-                        <div class="dropdown-content">
+                        <a href="menu.html" class="dropbtn nav-item">Menu</a>
+                         <div class="dropdown-content">
                             <a href="menu.html#breakfast">Breakfast</a>
                             <a href="menu.html#lunch">Lunch</a>
                             <a href="menu.html#drinks">Drinks</a>
@@ -37,57 +35,53 @@
         </header>
         <main>
             <section id="featured">
-                <h2>Today's Special</h2>
-                <img src="images/bagel-nova-lox.jpeg" alt="Today's special: Nova lox bagel sandwich">
-                <h3>Nova Lox</h3>
-                <p>Smooth Nova lox, cool cream cheese, fresh veggies, and capers stacked on a warm, freshly baked bagel of your choice.</p>
-                <a href="menu.html" class="click-me">Order Now</a>
+                <div class="image-wrapper">
+                    <h2>Today's Special</h2>
+                    <img src="images/bagel-nova-lox.jpeg" alt="Today's special: Nova lox bagel sandwich">
+                </div>
+                <div class="details">
+                    <h3>Nova Lox</h3>
+                    <p>Smooth Nova lox, cool cream cheese, fresh veggies, and capers stacked on a warm, freshly baked bagel of your choice.</p>
+                    <a href="menu.html" class="click-me">Order Now</a>
+                </div>
             </section>
             <section id="order">
                 <div class="image-container">
                     <img src="images/bagels-fresh.jpeg" alt="Freshly baked bagels">
                     <a href="#order" class="overlay-link">Start Online Order</a>
                 </div>
-                <h3>or get delivery...</h3>
-                <ul id="delivery-links">
-                    <li>
-                        <a href="https://www.doordash.com/store/bagels-&-beyond-brooksville-325782/69759346/"><img src="images/doordash.png" alt="Doordash icon"></a>
-                    </li>
-                    <li>
+                <div id="delivery-container">
+                    <h3>or get delivery...</h3>
+                    <div id="delivery-links">
+                        <a href="https://www.doordash.com/store/bagels-&-beyond-brooksville-325782/69759346/"><img src="images/doordash.png" alt="Doordash icon" class="delivery-icon"></a>
                         <a href="https://www.ubereats.com/store/bagels-n-beyond/1H2bBQwcUDiaxHXSTlzkQQ"><img src="images/uber-eats.png" alt="Uber Eats icon"></a>
-                    </li>
-                    <li>
                         <a href="https://www.grubhub.com/restaurant/bagels-n-beyond-16272-spring-hill-drive-brooksville/5954376?classicAffiliateId=%2Fr%2Fw%2F5954376%2Frestaurant%2F5954376"><img src="images/grubhub.png" alt="Grubhub icon"></a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
-            <img src="images/skyline.png" alt="New York skyline" id="skyline">
-            <section id="location">
-                <h4>Location</h4>
-                <address>16272 Spring Hill Dr<br>Brooksville, FL 34604</address>
-            </section>
-            <section id="hours">
-                <h4>Hours</h4>
-                <p>Monday - Friday<span>6:00am - 3:00pm</span></p>
-                <p>Saturday - Sunday<span>7:00am - 2:00pm</span></p>
-            </section>
-            <section id="contact">
-                <h4>Contact</h4>
-                <a href=“tel:352-593-4969”>(352) 593-4969</a>
-                <ul>
-                    <li>
+            <img src="images/skyline.png" alt="New York skyline" class="footer-badge">
+            <div class="footer-container">
+                <section id="location">
+                    <h4>Location</h4>
+                    <address>16272 Spring Hill Dr<br>Brooksville, FL 34604</address>
+                </section>
+                <section id="hours">
+                    <h4>Hours</h4>
+                    <p>Monday - Friday<span>6:00am - 3:00pm</span></p>
+                    <p>Saturday - Sunday<span>7:00am - 2:00pm</span></p>
+                </section>
+                <section id="contact">
+                    <h4>Contact</h4>
+                    <a href=“tel:352-593-4969” class="phone-number">(352) 593-4969</a>
+                    <div class="contact-links">
                         <a href="https://www.facebook.com/bagelsandbeyond" class="fa fa-facebook"></a>
-                    </li>
-                    <li>
                         <a href="https://twitter.com/Bagels352" class="fa fa-twitter"></a>
-                    </li>
-                    <li>
                         <a href="https://www.instagram.com/bagels352/" class="fa fa-instagram"></a>
-                    </li>
-                </ul>
-            </section>
+                    </div>
+                </section>
+            </div>
         </footer>
     </body>
 </html>
